@@ -38,30 +38,27 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 <head>
     <title>Login</title>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 <body>
-    
-    <h1>Login</h1>
-    
-    <?php if ($is_invalid): ?>
-        <em>Invalid login</em>
-    <?php endif; ?>
-    
     <form method="post">
-        <label for="email">email</label>
-        <input type="email" name="email" id="email"
-               value="<?= htmlspecialchars($_POST["email"] ?? "") ?>">
-        
-        <label for="password">Password</label>
-        <input type="password" name="password" id="password">
-        
-        <button>Log in</button>
+        <div class="d-flex flex-column justify-content-center min-vh-100 align-items-center">
+            <h1>Login</h1>
+            <input type="email" name="email" id="email"
+                value="<?= htmlspecialchars($_POST["email"] ?? "") ?>" placeholder="Email">
+            <input type="password" name="password" id="password" placeholder="Password">
+            
+            <button id="signupbutton">Log in</button>
+            <?php if ($is_invalid): ?>
+                <em class="error-message">Invalid login</em>
+            <?php endif; ?>
+            <a href="forgot-password.php">Forgot password?</a>
+            <a href="signup.php">Don't have an account?</a>
+        </div>
     </form>
-
-    <a href="forgot-password.php">Forgot password?</a><br>
-    <a href="signup.php">Don't have an account?</a>
     
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>
 

@@ -1,5 +1,5 @@
-div{
-    margin-top: 30px;
+body{
+    background-color: black;
 }
 
 #signupbutton{
@@ -26,7 +26,6 @@ input{
     outline: none;
     padding: 10px;
     width: 300px;
-
 }
 
 a{
@@ -37,4 +36,3 @@ a{
 .error-message {
     color: red;
 }
-
