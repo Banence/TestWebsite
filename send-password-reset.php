@@ -25,12 +25,12 @@ if ($mysqli->affected_rows) {
 
     $mail = require __DIR__ . "/mailer.php";
 
-    $mail->setFrom("noreply@example.com");
+    $mail->setFrom("n30444070@gmail.com", "noreply");
     $mail->addAddress($email);
     $mail->Subject = "Password Reset";
     $mail->Body = <<<END
 
-    Click <a href="http://example.com/reset-password.php?token=$token">here</a> 
+    Click <a href="http://localhost/php-password-reset/reset-password.php?token=$token">here</a> 
     to reset your password.
 
     END;
