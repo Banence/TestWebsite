@@ -44,7 +44,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 <body>
     <form method="post">
         <div class="d-flex flex-column justify-content-center min-vh-100 align-items-center">
-            <h1>Login</h1>
+            <h1 id="h1">Login</h1>
             <input type="email" name="email" id="email"
                 value="<?= htmlspecialchars($_POST["email"] ?? "") ?>" placeholder="Email">
             <input type="password" name="password" id="password" placeholder="Password">

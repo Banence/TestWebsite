@@ -71,7 +71,7 @@
     ?>
     <form action="signup.php" method="post" id="signup" novalidate>
         <div class="d-flex flex-column justify-content-center min-vh-100 align-items-center">  
-            <h1>Signup</h1>  
+            <h1 id="h1">Signup</h1>  
             <div>
                 <input type="text" id="name" name="name" placeholder="Name">
                 <?php if ($invalid && !empty($nameError)): ?>
